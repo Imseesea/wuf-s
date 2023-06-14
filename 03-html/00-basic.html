@@ -2,22 +2,24 @@
 <!DOCTYPE html>
 <!-- 한국어 : ko -->
 <html lang="ko">
-<!-- head 페이지 설정 -->
+  <!-- head 페이지 설정 -->
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1190">
-  <title>Naver</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAVER</title>
+  <meta name="description" content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
   <meta property="og:title" content="네이버">
   <meta property="og:description" content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
   <meta property="og:image" content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png">
-  <meta property="og:url" content="https://www.naver.com">
+  <meta property="og:url" content="https://www.naver.com/">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="네이버">
   <meta name="twitter:description" content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
   <meta name="twitter:image" content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png">
   <!-- 파비콘 설정 -->
   <link rel="icon" type="image/x-icon" href="https://www.naver.com/favicon.ico?1">
-  <!-- internal CSS -->
+
+  <!-- Internal CSS -->
   <style>
     header {
       border-bottom: 3px solid tomato;
@@ -25,6 +27,7 @@
   </style>
   <!-- External CSS : 이거 사용 -->
   <link rel="stylesheet" href="./css/comm.css">
+  
 </head>
 <body>
   <div>
@@ -36,7 +39,7 @@
     <section>
       <h1>h1 태그 : 가장 중요한 타이틀</h1>
       <h2>h2 태그 : 두번째로 중요한 타이틀</h2>
-      <h3>h2 태그 : 세번째로 중요한 타이틀</h3>
+      <h3>h3 태그 : 세번째로 중요한 타이틀</h3>
     </section>
     <hr>
     <header>
@@ -51,9 +54,9 @@
       <h2>텍스트 서식</h2>
     </header>
     <section>
-      -b태그 : 일반 <b>볼드체</b> <br>
-      -strong 태그 : <strong>중요한</strong> 텍스트 <br>
-      - i 태그 : <i>기술 용어, 구문</i>  <br>
+      - b 태그 : 일반 <b>볼드체</b> <br>
+      - strong 태그 : <strong>중요한</strong> 텍스트 <br>
+      - i 태그 : <i>기술 용어, 구문</i> <br>
       - em 태그 : <em>강조 텍스트</em> <br>
       - mark 태그 : <mark>디자인적으로 강조 텍스트</mark> <br>
       - address 태그 : <address>연락처 정보를 위한 텍스트</address>
@@ -72,8 +75,8 @@
       <a href="mailto:aswjk2222@naver.com">aswjk2222@naver.com</a> 
        <!-- 웹접근성 -->
        <a href="https://www.naver.com" target="_blank" title="새창열림">네이버</a>
-       <a href="#main">main바로가기</a>
-       <a href="./sub/sub.html#sec2">sub.html > id 값이 sec2 바로가기</a>
+       <a href="#main">main 바로가기</a>
+       <a href="./sub/sub.html#sec2">sub.html > id 값이 sec3 바로가기</a>
     </section>
 
     <header>
@@ -92,7 +95,7 @@
       <!-- 반응형 이미지 -->
       <picture>
         <!-- width 650px 이상일 경우 -->
-        <source media="(min-width: 650px)" srcset="images\img_food.jpg">
+        <source media="(min-width: 650px)" srcset="images/img_food.jpg">
         <!-- width 465px 이상일 경우 -->
         <source media="(min-width: 465px)" srcset="./images/img_car.jpg">
         <img src="./images/img_girl.jpg" alt="뒷통수 아줌마" width="100%">
@@ -106,57 +109,65 @@
       <table>
         <!-- 웹접근성 요건 추가 -->
         <caption>테이블 설명 : 자세한 설명</caption>
+        <!-- 열의 가로 사이즈 -->
         <colgroup>
-          <col width="40%">
-          <col span="3"> <!-- span 열의 갯수 -->
+          <!-- span : 열의 갯수 -->
+          <col>
+          <col width="25%">
+          <col span="4" width="10%">
         </colgroup>
+        <!-- 테이블의 구분 -->
         <thead>
           <tr>
-            <td>이름</td>
-            <td>국어</td>
-            <td>영어</td>
-            <td>수학</td>
+            <th scope="col" rowspan="2" colspan="2">과목</th>
+            <th scope="col" colspan="4">1-1</th>
           </tr>
-          
+                    <tr>
+            <th scope="col">박형식</th>
+            <th scope="col">박보검</th>
+            <th scope="col">이준호</th>
+            <th scope="col">최우식</th>
+          </tr>
         </thead>
+        <!-- 테이블의 본문 -->
         <tbody>
           <tr>
-            <td>박형식</td>
-            <td>열</td>
-            <td>열</td>
-            <td>열</td>
+            <th scope="row" rowspan="3">공통</th>
+            <th scope="row">국어</th>
+            <td>100점</td>
+            <td>90</td>
+            <td>80</td>
+            <td>70</td>
           </tr>
           <tr>
-            <td>박보검</td>
-            <td>열</td>
-            <td>열</td>
-            <td>열</td>
+            <th scope="row">영어</th>
+            <td>100</td>
+            <td>90</td>
+            <td>80</td>
+            <td>70</td>
           </tr>
           <tr>
-            <td>이준호</td>
-            <td>열</td>
-            <td>열</td>
-            <td>열</td>
-          </tr>
-          <tr>
-            <td>최우식</td>
-            <td>열</td>
-            <td>열</td>
-            <td>열</td>
+            <th scope="row">수학</th>
+            <td>100</td>
+            <td>90</td>
+            <td>80</td>
+            <td>70</td>
           </tr>
         </tbody>
+        <!-- 테이블의 요약 -->
         <tfoot>
           <tr>
-            <td>열</td>
-            <td>열</td>
-            <td>열</td>
-            <td>열</td>
+            <th scope="row" colspan="2">평균 점수</th>
+            <td>100</td>
+            <td>90</td>
+            <td>80</td>
+            <td>70</td>
           </tr>
         </tfoot>
       </table>
     </section>
     <style>
-      table, tr, td {
+      table, tr, td, th {
         border: 3px solid hsl(231, 98%, 65%);
       }
       table {
@@ -165,15 +176,189 @@
       td {
         height: 70px;
       }
+      thead {
+        background: #9dc1fb;
+      }
+      tfoot {
+        background: #04a5fc;
+      }
     </style>
 
+    <header>
+      <h2>list 태그</h2>
+    </header>
+    <section>
+      <h3>좋아하는 음식</h3>
+      <!-- 순서 없는 목록 -->
+      <ul>
+        <li>회</li>
+        <li>닭발</li>
+        <li>라면</li>
+      </ul>
+
+      <!-- 순서가 있는 목록 -->
+      <ol>
+        <li>라면</li>
+        <li>회</li>
+        <li>닭발</li>
+      </ol>
+
+      <!-- nav -->
+      <h3>메인 메뉴</h3>
+      <!-- depth1 -->
+      <ul>
+        <li>
+          탑
+          <!-- depth2 -->
+          <ul>
+            <li>
+              블라우스
+              <ul>
+                <li>3depth</li>
+                <li>3depth</li>
+                <li>3depth</li>
+              </ul>
+            </li>
+            <li>티</li>
+            <li>셔츠</li>
+            <li>니트</li>
+          </ul>
+        </li>
+        <li>
+          아우터
+          <!-- depth2 -->
+          <ul>
+            <li>자켓</li>
+            <li>코트</li>
+            <li>
+              가디건
+              <ul>
+                <li>depth3</li>
+                <li>depth3</li>
+                <li>depth3</li>
+              </ul>
+            </li>
+            <li>머플러</li>
+          </ul>
+        </li>
+        <li>
+          팬츠
+          <!-- depth2 -->
+          <ul>
+            <li>청바지</li>
+            <li>짧은바지</li>
+            <li>긴바지</li>
+            <li>레깅스</li>
+          </ul>
+        </li>
+        <li>
+          악세서리
+          <!-- depth2 -->
+          <ul>
+            <li>귀고리</li>
+            <li>목걸이</li>
+            <li>반지</li>
+            <li>팔찌</li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="#">depth1</a> 
+          <ul>
+            <li>
+              <a href="#">depth2</a>
+              <ul>
+                <li>
+                  <a href="#">depth3</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">depth2</a>
+              <ul>
+                <li>
+                  <a href="#">depth3</a>
+                </li>
+              </ul>
+            </li>
+          </ul>         
+        </li>
+        <li>
+          <a href="#">depth1</a>
+          <ul>
+            <li>
+              <a href="#">depth2</a>
+              <ul>
+                <li>
+                  <a href="#">depth3</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">depth2</a>
+              <ul>
+                <li>
+                  <a href="#">depth3</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">depth1</a>
+          <ul>
+            <li>
+              <a href="#">depth2</a>
+              <ul>
+                <li>
+                  <a href="#">depth3</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">depth2</a>
+              <ul>
+                <li>
+                  <a href="#">depth3</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">depth1</a>
+          <ul>
+            <li>
+              <a href="#">depth2</a>
+              <ul>
+                <li>
+                  <a href="#">depth3</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">depth2</a>
+              <ul>
+                <li>
+                  <a href="#">depth3</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
 
 
 
-
-
-    <section id:nav>
-      <h2>nav</h2>
+    <section id="nav">
+     <h2>nav</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ducimus voluptates exercitationem odit quis adipisci laboriosam eum omnis obcaecati reprehenderit aperiam ea possimus sequi similique sed dolorem, voluptatem placeat molestias.</p>
+    </section>
+    <section>
+     <h2>nav</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ducimus voluptates exercitationem odit quis adipisci laboriosam eum omnis obcaecati reprehenderit aperiam ea possimus sequi similique sed dolorem, voluptatem placeat molestias.</p>
     </section>
     <section>
@@ -197,6 +382,7 @@
   <!-- 주석 태그 -->
   <!-- <p>안녕 난 장가경이야.</p> -->
   <p>안녕 난 <!-- 장가경이야. --></p>
+
 
 </body>
 </html>
