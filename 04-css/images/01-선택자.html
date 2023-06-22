@@ -9,6 +9,42 @@
     <h1>선택자</h1>
 
     <h2>태그 선택자</h2>
+
+    <div class="wrap">
+      wrap
+      <div class="util">util</div>
+      <header class="header">
+        header
+        <h1 class="logo">
+          <a href="#">logo</a>
+        </h1>
+        <nav class="gnb">nav</nav>
+      </header>
+    </div>
+    <style>
+      .wrap {
+        border: 5px solid rgb(255, 0, 0);
+        background: rgb(255, 0, 0);
+      }
+      .util {
+        background: rgb(246, 232, 129, 0.5);
+      }
+      .header {
+        border: 5px solid #fa7ad3;
+      }
+      .logo {
+        background: #000;
+      }
+      .logo a {
+        font-size: 18px;
+        color: white;
+      }
+      .gnb {
+        border: 5px solid hsl(240, 100%, 50%, 0.5);
+      }
+    </style>
+
+    <br /><br /><br />
     <div id="gnb">
       <ul class="depth1">
         <li class="fst">
@@ -50,7 +86,7 @@
         background: rgb(247, 215, 215);
       }
       #gnb {
-        border: 3px solid #fa61e3;
+        border: 5px solid #fa61e3;
       }
       .depth2-1 {
         border: 3px solid #ffc4ff;
@@ -62,7 +98,7 @@
         background: #0bcfc8;
       }
       ul {
-        border: 1px solid #000;
+        border: 3px solid #000;
       }
       li {
         margin: 10px;
@@ -71,7 +107,7 @@
       ul li {
         background: #beef7c;
       }
-      ul.depth1 .lst > a {
+      ul.depth1 > li {
         background: #efd3ea;
       }
     </style>
