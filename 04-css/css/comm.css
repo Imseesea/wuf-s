@@ -9,6 +9,11 @@
   line-height: 1.5;
   color: #333;
 }
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
 
 .wrap {
   width: 1200px;
@@ -20,11 +25,7 @@ header {
   padding: 20px 0;
   background: #e1befa;
 }
-header::after {
-  content: "";
-  clear: both;
-  display: block;
-}
+
 header hl {
   float: left;
 }
@@ -35,11 +36,7 @@ header nav ul {
   padding-top: 10px;
   background: #f4f8c9;
 }
-header nav ul::after {
-  content: "";
-  clear: both;
-  display: block;
-}
+
 header nav li {
   float: left;
   margin-left: 30px;
