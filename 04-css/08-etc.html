@@ -10,11 +10,70 @@
     <h1>tooltip</h1>
 
     <div class="tooltip-wrap">
-        tooltip 보기
-        <div class="tooltip-item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        tooltip 보기 00000 
+        <br> 
+        tooltip 보기 00000
+        <div class="item top">top</div>
+        <div class="item bottom">bottom</div>
+        <div class="item left">left</div>
+        <div class="item right">right</div>
     </div>
     
     <style>
+        /* arrow */
+        .item::after {
+            content: '';
+            position: absolute;
+            border-width: 5px;
+            border-style: solid;
+            border-color: rgb(244, 89, 255) transparent transparent transparent;
+        }
+        .right::after {
+            top: 50%;
+            left: -10px;
+            transform: rotate(90deg) translateX(-50%);
+        }
+        .left::after {
+            top: 50%;
+            right: -10px;
+            transform: rotate(-90deg) translateX(50%);
+        }
+        .bottom::after {
+            top: -10px;
+            left: 50%;
+            transform: rotate(180deg) translateX(50%);
+        }
+        .top::after {
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .right {
+            position: absolute;
+            top: 50%;
+            right: -60px;
+            transform: translateY(-50%);
+        }
+        .left {
+            position: absolute;
+            top: 50%;
+            left: -60px;
+            transform: translateY(-50%);
+        }
+        .bottom {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .top {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            margin-left: -25px; /* width 50px */
+        }
+        
         .tooltip-wrap {
             display: inline-block;
             position: relative;
@@ -24,19 +83,18 @@
             color: #adb1ff;
             background: #cbfcf3;
         }
-        .tooltip-item {
-            position: absolute;
-            bottom: -100px;
-            left: 50%;
+        .item {
             display: inline-block;
-            max-width: 100px;
-            padding: 5px 10px;
+            width: 50px;
+            padding: 5px 0;
             font-size: 12px;
             font-weight: normal;
             color: #7654ff;
             background: #000;
             border-radius: 5px;
-            transform: translateY(-50%);
+            opacity: 0.5;
+            text-align: center;
+            /* transform: translateX(-50%); */
             /* word-break: break-all; */
         }
 
