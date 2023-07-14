@@ -1,4 +1,10 @@
 @charset "UTF-8";
+:root {
+  --txt:  #222328;
+
+  --widthWrap : 1200px;
+  --slideHeight : 300px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +12,10 @@
   box-sizing: border-box;
   text-decoration: none;
   line-height: 1.5;
-  color: #222328;
+  color: var(--txt);
 }
 .wrap {
-  width: 1200px;
+  width: var(--widthWrap);
   margin: 0 auto;
   border: 1px solid black;
 }
@@ -107,7 +113,7 @@
 .slide-wrap {
   position: relative;
   overflow: hidden;
-  height: 300px;
+  height: var(--slideHeight);
 }
 .lst-slide {
   position: absolute;
