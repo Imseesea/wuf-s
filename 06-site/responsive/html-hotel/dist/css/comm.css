@@ -331,4 +331,68 @@ input[type=password] {
 
 .instagram {
   background: url(../../images/sns5.png) 0 0 no-repeat;
+}
+
+.util {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  right: 0;
+  height: 40px;
+  background: #000;
+}
+
+.grid {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 195px);
+}
+
+.box-g {
+  height: 100%;
+  background: #d6eaff;
+}
+
+.box-1 {
+  grid-column: 1/span3;
+  grid-row: 1/span2;
+  background: #d5e9ff;
+}
+
+.box-2 {
+  grid-column: 4/span2;
+  background: #d2e7fe;
+}
+
+.box-3 {
+  background: #cce2fa;
+}
+
+.box-4 {
+  background: #c4e0ff;
+}
+
+.box-5 {
+  background: #c0dcfa;
+}
+
+.box-6 {
+  background: #c2dfff;
+}
+
+.box-7 {
+  background: #b8dbff;
+}
+
+.box-8 {
+  background: #b6d9ff;
+}
+
+.box-9 {
+  background: #b4d8ff;
+}
+
+.box-10 {
+  background: #b2d7ff;
 }/*# sourceMappingURL=comm.css.map */
